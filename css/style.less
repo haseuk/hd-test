@@ -1,0 +1,177 @@
+@import "asset";
+@import "font";
+@use-rem: true;
+@rem: 18;
+
+html { font-size: 18px; font-family: "Hyundai Sans Head", sans-serif; }
+
+input, select, textarea { outline: none; font-family: notokr, sans-serif; }
+table { table-layout: fixed; border-collapse: collapse; }
+img { backface-visibility: hidden; }
+
+.f-color { color:#000; }
+.bg-color { background-color:#153f6f; }
+.que-color { background-color:#001e40; }
+.text-font { font-family: "Hyundai Sans Text", sans-serif; }
+.h-mr50 { .ans label { .mr(50); }}
+.h-mr60 { .ans label { .mr(60); }}
+.h-mr70 { .ans label { .mr(70); }}
+.h-mr80 { .ans label { .mr(80); }}
+.h-mr90 { .ans label { .mr(90); }}
+.h-mr100 { .ans label { .mr(100); }}
+
+.h-mb15 { .ans label { .mb(15); }}
+
+
+.container { .min-w(1080);
+  .wrap { .fs(0); .tc; .bgc(#ece8e7);
+    .top { .p(50); .-box; .tr;
+      h1 { .contain('../img/logo.png'); .wh(259,39); .ib;
+        a { .block; .f; }
+      }
+    }
+
+    section { .hide; .mt(20);
+      .inner { .p(0,50,80); .-box; min-height:calc(100vh - 299px);
+        h2 { .fs(85); .f-color; .medium; .lh(86); .mt(13); .tl; .ls(-2); }
+
+        .q-board { .ls(-0.5);
+          .q-list { .mb(85);
+            &:last-child { .mb(0); }
+            .que { .fs(38); color:#fff; .medium; .tl; .mb(30); .rel;
+              i, p { color:#000; .ib; }
+              i { .vat; }
+              p { .ti(75); .ml(-75); }
+            }
+            .ans { .tl;
+              .select-wrap { .wh(100%,80); .rel;
+                &:after { .cnt; .wh(22,18); .contain('../img/ico-2.png'); .abs; .rt(14,29); .vam; .ib; pointer-events: none; }
+                select { .fs(30); .block; .f; .bgc(#fff); .-a(#e1e1e1); .pl(30); .-box; }
+              }
+              p { .fs(35); }
+            }
+            &.select .ans { .pl(0); }
+            &.check-box .ans label input[type=checkbox]:checked + i:after { .cnt; .wh(19,19); .br(50%); .abs; .lt(4,4); .bg-color; }
+
+            &.q-list1 { .h-mr60; }
+            &.q-list2 { .h-mr100; }
+            &.q-list3 {
+              .ans {
+                .select-wrap { .w(314); .ib; .mr(19); .rel;
+                  &:last-child { .mr(0); }
+                }
+              }
+            }
+            &.q-list4 { .h-mb15;
+              .ans {
+                label { .block; }
+                p { .mt(50); }
+              }
+            }
+            &.q-list5-1 {
+              .ans {
+                .label-wrap { .clear;
+                  p { .fs(35); .tc; .medium; .w(122); .m(0,36,15,0); .ib; .vat; .clear;
+                    s { .w(43); .ib; .-box;
+                      &.l { .fl; .tl; .pl(2); }
+                      &.r { .fr; .tr; .pr(2); }
+                    }
+                  }
+                  label { .mb(15);
+                    s { .w(150); .tl; }
+                  }
+                  &:first-child { .mb(17); }
+                  &:nth-child(2) { .mb(20); }
+                  &:last-child p { .mb(0); .lh(80); }
+                  input[type=text] { .fs(35); .wh(795,80); .-a(#e1e1e1,2px); .lh(80); .pl(20); .-box; .fr; }
+                }
+              }
+            }
+            &.q-list5-2 { .h-mr70; }
+            &.q-list5-4 { .h-mr50 }
+            &.q-list5-5 { .h-mb15;
+              s { .w(250); }
+            }
+            &.q-list5-6 { .h-mr50; }
+            &.q-list6-1 { .h-mr50; }
+            &.q-list6-2 { .h-mb15; .h-mr80;
+              s { .w(165);  &.s { width:auto; } }
+            }
+            &.q-list6-3 { .h-mr50; .h-mb15; }
+            &.q-list6-4 { .h-mr50; }
+            &.q-list7 { .h-mr100; }
+            &.q-list8 .ans { .pl(0);
+              textarea { .fs(30); .wh(100%,355); .-a(#e1e1e1,2px); .p(25,40); .-box; }
+            }
+          }
+        }
+      }
+
+      label { .ib;
+        i { .wh(29,29); .-a(#b7b7b7); .-box; .ib; .bgc(#fff); .br(50%); .mr(15); .vam; .rel; }
+        input[type=radio]:checked + i:after { .cnt; .wh(19,19); .br(50%); .abs; .lt(4,4); .bg-color; }
+        s { .fs(35); .lh(44); .ib; .regular; .vam; }
+        input { .hide; }
+        &:last-child { .mr(0)!important; }
+      }
+
+      .btn { .fs(60); .lh1; .pt(54); color:#fff; .medium; .wh(100%,160); .-box; .bg-color; .block; .pointer;
+        s { .wh(22,36); .contain('../img/ico-3.png'); .ib; .ml(20); }
+      }
+
+      &.sec1 { .mt(0);
+        .inner {
+          .q-board { .mt(85); }
+        }
+      }
+      &.sec5 {
+        .inner {
+          .agree {
+            .agree-inner {
+              .tit { .fs(38); .medium; .tc; .wh(100%,80); .lh(80); .bgc(#cfc8c2); .ls(-1); }
+              .txt { .fs(22); .lh(28); color:#444; .tl; font-family: "Dotum", sans-serif; .bgc(#fff); .-a(#e1e1e1,2px); .p(34,40); }
+              .agree-chk { .m(35,0,75); .tl;
+                label { .mr(40); }
+              }
+              .user-info {
+                .p-wrap { .clear; .mt(50);
+                  p { .fs(35); .wh(130,80); .lh(80); .ib; .medium; .vam;
+                    s { .ib; .-box;
+                      &.l { .fl; .tl; .pl(2); }
+                      &.r { .fr; .tr; .pr(2); }
+                    }
+                  }
+                  input { .fs(35); .wh(790,80); .lh(80); .-a(#e1e1e1,2px); .vam; .fr; .pl(20); .-box; }
+                }
+                .p-wrap + .p-wrap { .mt(25); }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  [data-active="1"] .sec1,
+  [data-active="2"] .sec2,
+  [data-active="3"] .sec3,
+  [data-active="4"] .sec4,
+  [data-active="5"] .sec5 { .block; }
+
+
+}
+.coupon { .fs(0); .bgc(#ede9e8); .tc;
+  .top { .bgc(#231916); .p(53,0);
+    h2 { .wh(570,56); .contain('../img/coffee.png'); .ib; }
+  }
+  article {
+    .txt { .p(0,50); .-box;
+      p { .fs(48); font-family: "Hyundai Sans Text", sans-serif; .bold; .mt(32); .-b(#000); .pb(15); }
+      p + p { .fs(28); color:#666666; .lh(36); .regular; .-b; .pb(0); .tl; .pl(35); .ls(-0.5); }
+    }
+  }
+  .btn { .fs(53); color:#fff; .wh(632,141); .lh(141); .ib; .m(64,0,93); .pointer;
+    &.btn1 { .bgc(#000);   s { .contain('../img/arrow.png'); .wh(29,33); .ib; }}
+    &.btn2 { .bgc(#787878); }
+  }
+}
