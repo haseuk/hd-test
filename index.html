@@ -476,27 +476,27 @@
                 </div>
                 <div class="ans">
                   <label>
-                    <input type="radio" name="q6_3" value="06:00 – 10:00">
+                    <input type="radio" name="q6_3" value="6_10">
                     <i></i>
                     <s>06:00 – 10:00</s>
                   </label>
                   <label>
-                    <input type="radio" name="q6_3" value="10:00 – 14:00">
+                    <input type="radio" name="q6_3" value="10_14">
                     <i></i>
                     <s>10:00 – 14:00</s>
                   </label>
                   <label>
-                    <input type="radio" name="q6_3" value="14:00 – 18:00">
+                    <input type="radio" name="q6_3" value="14_18">
                     <i></i>
                     <s>14:00 – 18:00</s>
                   </label>
                   <label>
-                    <input type="radio" name="q6_3" value="18:00 – 22:00">
+                    <input type="radio" name="q6_3" value="18_22">
                     <i></i>
                     <s>18:00 – 22:00</s>
                   </label>
                   <label>
-                    <input type="radio" name="q6_3" value="22:00 – 06:00">
+                    <input type="radio" name="q6_3" value="22_06">
                     <i></i>
                     <s>22:00 – 06:00</s>
                   </label>
@@ -547,12 +547,12 @@
                 </div>
                 <div class="ans">
                   <label>
-                    <input type="radio" name="q7" value="">
+                    <input type="radio" name="q7" value="y">
                     <i></i>
                     <s>예</s>
                   </label>
                   <label>
-                    <input type="radio" name="q7" value="">
+                    <input type="radio" name="q7" value="n">
                     <i></i>
                     <s>아니오</s>
                   </label>
@@ -569,7 +569,7 @@
               </div>
             </div>
           </div>
-          <a class="btn next" onclick="go(5)">설문 완료<s></s></a>
+          <a class="btn next" onclick="valid4()">설문 완료<s></s></a>
         </section>
       </form>
 
@@ -598,12 +598,12 @@
               </div>
               <div class="agree-chk">
                 <label>
-                  <input type="radio" name="agree" value="">
+                  <input type="radio" name="agree" value="y">
                   <i></i>
                   <s>동의함</s>
                 </label>
                 <label>
-                  <input type="radio" name="agree" value="">
+                  <input type="radio" name="agree" value="n">
                   <i></i>
                   <s>동의하지 않음</s>
                 </label>
@@ -612,17 +612,17 @@
                 <div class="tit">쿠폰 발송을 위한 고객님의 성함 및 휴대전화 번호를 입력해 주세요.</div>
                 <div class="p-wrap">
                   <p><s class="l">성</s><s class="r">함</s></p>
-                  <input type="text">
+                  <input type="text" name="name" value="">
                 </div>
                 <div class="p-wrap">
                   <p>휴대전화</p>
-                  <input type="text">
+                  <input type="text" name="phone" value="">
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <a class="btn next">쿠폰 발송<s></s></a>
+        <a class="btn next" onclick="valid5()">쿠폰 발송<s></s></a>
       </section>
       </form>
     </div>
