@@ -120,6 +120,7 @@ function init() {
   var getCheckboxAlls = document.querySelectorAll('input[type=checkbox]:checked');
   var getInputAlls = document.querySelectorAll('input[type=text]');
   var selectAlls = document.querySelectorAll('select');
+  var textArea = document.querySelectorAll('textarea');
 
   [].forEach.call(getRadioAlls, function (e, i) {
     var radioData = e.value;
@@ -137,5 +138,7 @@ function init() {
   for (var i = 0; i < selectAlls.length; i++) {
     vals.push(selectAlls[i].options[selectAlls[i].selectedIndex].value);
   }
-
+  localStorage.setItem(i, vals)
+  var textData = textArea.value;
+  localStorage.setItem(textData);
 }
